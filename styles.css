@@ -1,0 +1,41 @@
+body {
+  background-image: url("./images/base.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  color: white;
+}
+
+header {
+  text-align: center;
+  border-bottom: 3px solid rgba(246, 253, 254, 0.153);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.location-container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.label-location {
+  font-size: 25px;
+}
+
+.input-location {
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  width: 150px;
+  height: 23px;
+}
+
+.search {
+  font-size: 25px;
+  cursor: pointer;
+}
