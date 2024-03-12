@@ -68,6 +68,20 @@ async function getWeatherData() {
 function render() {
   let weatherData = document.querySelector(".weather-data");
   weatherData.style.display = "block";
+  let condition = getData.condition;
+  if (condition === "Sunny") {
+    condition += "☀️";
+  } else if (condition === "Cloudy" || condition === "Partly cloudy") {
+    condition += "☁️";
+  } else if (
+    condition === "Heavy rain" ||
+    condition === "Moderate rain" ||
+    condition === "Light rain"
+  ) {
+    condition += "🌧";
+  } else {
+    condition += "";
+  }
 
   weatherData.innerHTML = `
   <div class="location-name">
@@ -77,7 +91,7 @@ function render() {
   <div>Local time: ${getData.localTime}</div>
   <div class="other-data">
     <p>Temperature: ${getData.tempInF} ℉ / ${getData.tempInC} ℃</p>
-    <h3 class="condition">${getData.condition}</h3>
+    <h2 class="condition">${condition} </h2>
     <p>Humidity: ${getData.humidity}</p>
     <p>Wind: ${getData.windInMph} mph / ${getData.windInKph} kph</p>
   </div>
@@ -93,7 +107,10 @@ searchBtn.addEventListener("click", () => {
 function changeBackground() {
   if (getData.condition == "Sunny") {
     document.body.style.backgroundImage = "url('./images/sunny.jpg')";
-  } else if (getData.condition == "Cloudy") {
+  } else if (
+    getData.condition == "Cloudy" ||
+    getData.condition == "Partly cloudy"
+  ) {
     document.body.style.backgroundImage = "url('./images/cloudy.jpg')";
   } else if (
     getData.condition == "Heavy rain" ||
