@@ -2,6 +2,8 @@
 
 Odin Project
 
+Live Preview: https://pbhaukajee.github.io/Weather-App/
+
 Image Source:
 
 Base: https://unsplash.com/photos/blue-ocean-photography-ELXbHhzVFO0 by Dave-Hoefler
