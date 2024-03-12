@@ -39,3 +39,18 @@ h1 {
   font-size: 25px;
   cursor: pointer;
 }
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(206, 215, 212);
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  background-color: rgb(206, 215, 212);
+  color: rgb(26, 28, 39);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 0 auto;
+}
